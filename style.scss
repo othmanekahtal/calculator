@@ -192,3 +192,12 @@ h3 {
     background-color: darken($initial-color, 10%);
   }
 }
+.hidden {
+  display: none !important;
+}
+.history_container,
+.trigonometry_calc {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

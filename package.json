@@ -1,0 +1,19 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "sass-watch": "node-sass -w style.scss style.css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/othmanekahtal/calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/othmanekahtal/calculator/issues"
+  },
+  "homepage": "https://github.com/othmanekahtal/calculator#readme"
+}
