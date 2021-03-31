@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>calculator</title>
+</head>
+
+<body>
+    <main class="calculator">
+        <div class="interface">
+            <div class="input">
+                <span class="sub_operation"></span>
+                <span class="result"></span>
+            </div>
+
+            <div class="calculator-body">
+                <div class="operators">
+                    <div class="padding btn clickable operator add">+</div>
+                    <div class="padding btn clickable operator min">-</div>
+                    <div class="padding btn clickable operator divide">*</div>
+                    <div class="padding btn clickable operator multi">/</div>
+                </div>
+                <div class="numbers">
+                    <div class="padding btn clickable number number-1">1</div>
+                    <div class="padding btn clickable number number-2">2</div>
+                    <div class="padding btn clickable number number-3">3</div>
+                    <div class="padding btn clickable number number-4">4</div>
+                    <div class="padding btn clickable number number-5">5</div>
+                    <div class="padding btn clickable number number-6">6</div>
+                    <div class="padding btn clickable number number-7">7</div>
+                    <div class="padding btn clickable number number-8">8</div>
+                    <div class="padding btn clickable number number-9">9</div>
+
+                    <div class="padding btn clickable number arraw-left hidden advanced">(</div>
+                    <div class="padding btn clickable number arrow-right hidden advanced">)</div>
+                    <div class="padding btn clickable number cos hidden advanced">cos</div>
+                    <div class="padding btn clickable number sin hidden advanced">sin</div>
+                    <div class="padding btn clickable number tan hidden advanced">tan</div>
+                    <div class="padding btn clickable number LOG10 hidden advanced">log10</div>
+
+                    <div class="padding btn clickable number dot">.</div>
+                    <div class="padding btn clickable number zero">0</div>
+                    <div class="padding clickable return">C</div>
+                    <div class="padding clickable history">H</div>
+                    <div class="padding clickable clear">CLEAR</div>
+                    <div class="padding clickable tri">TRI</div>
+                </div>
+            </div>
+            <div class="AC clickable">
+                <span>AC</span>
+            </div>
+            <div class="equal clickable">
+                <span>&#61;</span>
+            </div>
+        </div>
+        <div class="history_container hidden">
+            <div class="content"></div>
+            <div class="to_calc">CALC</div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>

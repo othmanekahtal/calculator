@@ -1,0 +1,194 @@
+/*================
+  1-variables :
+================*/
+
+$primary-color: #faae79;
+$secondary-color: #f6cb6c;
+$background-color: #f9f9f9;
+$body-background-color: #333333;
+$background-color-white: #ffffff;
+$initial-color: #9b9da6;
+
+/*================
+  2-fonts :
+================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&display=swap");
+
+* {
+  &,
+  &:before,
+  &:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 18px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+  color: $initial-color;
+  background-color: $body-background-color;
+  display: flex;
+}
+.calculator {
+  margin: auto;
+  background-image: linear-gradient(
+    to right bottom,
+    $primary-color,
+    $secondary-color
+  );
+  border-radius: 25px;
+  overflow: hidden;
+}
+.calculator .interface {
+  position: relative;
+  display: grid;
+  grid-template-columns: 15vw 3.5vw;
+  grid-template-rows: 22.5vh 15vh auto;
+
+  .input {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    grid-column: 1 / -1;
+    background-image: linear-gradient(
+      to right bottom,
+      $primary-color,
+      $secondary-color
+    );
+
+    span.sub_operation {
+      font-size: 12px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: rgba(white, 0.5);
+    }
+
+    span.result {
+      color: white;
+      position: absolute;
+      padding: 35px 15px 0;
+      font-size: 50px;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .clickable {
+    cursor: pointer;
+  }
+
+  .calculator-body {
+    grid-column: 1 / -2;
+    grid-row: 2 / -1;
+    display: flex;
+    flex-direction: column;
+
+    .operators {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background-color: $background-color;
+      font-weight: 500;
+
+      & > .padding {
+        flex: 1;
+
+        &:hover {
+          background-color: darken($background-color, 15%);
+        }
+      }
+    }
+
+    .numbers {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      align-content: space-around;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background-color: $background-color-white;
+
+      & .padding:hover {
+        background-color: darken($background-color-white, 15%);
+      }
+    }
+
+    .padding {
+      place-self: stretch;
+      text-align: center;
+      padding: 15px 0;
+      transition: background-color 0.35s ease-in-out;
+    }
+  }
+
+  %center {
+    display: flex;
+    font-weight: 500;
+    height: 100%;
+    width: 100%;
+
+    span {
+      margin: auto;
+      display: inline-block;
+    }
+  }
+
+  .AC {
+    @extend %center;
+    background-color: $background-color;
+
+    &:hover {
+      background-color: darken($background-color, 15%);
+    }
+  }
+
+  .equal {
+    @extend %center;
+    text-align: center;
+    background-image: linear-gradient(
+      to right bottom,
+      $primary-color,
+      $secondary-color
+    );
+    color: white;
+    transition: background-image 0.35s ease-in-out;
+
+    &:hover {
+      background-image: linear-gradient(
+        to right bottom,
+        darken($primary-color, 10%),
+        darken($secondary-color, 10%)
+      );
+    }
+  }
+}
+h3 {
+  color: white;
+  font-size: 25px;
+  padding: 20px;
+}
+.to_calc {
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: $background-color;
+  background-color: $initial-color;
+  padding: 15px 25px;
+  border-radius: 10px;
+  transition: background-color 0.25s ease-in-out;
+  &:hover {
+    background-color: darken($initial-color, 10%);
+  }
+}
